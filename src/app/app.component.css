@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Roboto', sans-serif; 
+}
+body {
+  background-color: lavender;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.top_navbar{
+  background: #80CBC4;
+  height: 60px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 55px;
+}
+
+.top_navbar .hamburger{
+  width: 80px;
+  background: #004D40;
+  position: relative;
+  font-size: 28px;
+}
+
+.top_navbar .hamburger .hamburger__inner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+}
+
+.top_navbar .hamburger__inner > div{
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.top_navbar .hamburger div.two{
+  top: 10px;
+  width: 40px;
+}
+
+.top_navbar .hamburger div.three{
+  top: 20px;
+}
+
+.top_navbar .menu{
+  width: calc(100% - 80px);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.top_navbar .menu .logo{
+  color: #004D40;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.top_navbar .menu .logo img{
+  width: 95px;
+  height: 95px;
+
+}
+
+.top_navbar .menu .right_menu ul{
+  display: flex;
+}
+
+.top_navbar .menu .right_menu ul li{
+  position: relative;
+}
+
+.top_navbar .menu .right_menu ul li .fas{
+  font-size: 22px;
+  cursor: pointer;
+  color: #004D40;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd{
+  position: absolute;
+  top: 35px;
+  right: -10px;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  padding: 10px 0;
+  width: 180px;
+  border-radius: 3px;
+  display: none;
+  user-select: none;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd.active{
+  display: block;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd .dd_item{
+  padding: 10px;
+  cursor: pointer;
+  color: #004D40;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd .dd_item:hover{
+  background: #E0F2F1;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd:before{
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+}
+.navbar a img{
+width: 60px;
+height: 60px;
+}
+
+.main_container .sidebar{
+  position: fixed;
+  top: 115px;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  background: #004D40;
+  transition: all 0.3s ease;
+}
+
+.main_container .sidebar .sidebar__inner{
+  position: relative;
+}
+
+.main_container .sidebar .profile{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 20px 0;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.main_container .sidebar .profile .img{
+  padding: 0 18px;
+}
+
+.main_container .sidebar .profile img{
+   width: 45px;
+}
+
+.main_container .sidebar .profile p:first-child{
+  font-size: 14px;
+  color: #80CBC4;
+  margin-bottom: 3px;
+}
+
+.main_container .container{
+  margin-top: 60px;
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.main_container .sidebar ul li a{
+  color: #fff;
+  font-size: 18px;
+  padding: 20px 30px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px;
+  transition: all 0.3s ease;
+}
+
+.main_container .sidebar ul li a .icon{
+  margin-right: 15px;
+  font-size: 28px;
+}
+
+.main_container .sidebar ul li a span{
+  display: inline-block;
+}
+
+.main_container .sidebar ul li a:hover,
+.main_container .sidebar ul li a.active{
+  background: #fff;
+  color: #004D40;
+}
+.main_container .sidebar .sidebar__inner ul li a .title {
+  font-size: .9rem;
+  padding-left: 10px;
+}
+
+/* .main_container .sidebar .sidebar__inner .social_media {
+  position: absolute;
+  bottom: auto;
+  left: 7px;
+  display: flex;
+}
+.main_container .sidebar .sidebar__inner .social_media a {
+  padding: 20px 20px;
+  font-size: 25px;
+} */
+
+.main_container .container .item{
+  background: #fff;
+  border: 1px solid #E0F2F1;
+  margin-bottom: 30px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.apply {
+  width: 300px;
+  height: 200px;
+}
+.apply span {
+  display: inline-block;
+  margin: 40px auto;
+  text-align: center;
+  line-height: 3.5rem;
+  font-size: 2.5rem;
+}
+
+
+
+/* after adding active class */
+.wrapper.active .sidebar{
+  width: 80px;
+}
+
+.wrapper.active .sidebar ul li a span.title,
+.wrapper.active .profile_info
+{
+  display: none;
+}
+
+.wrapper.active .main_container .container{
+  width: calc(100% - 80px);
+  margin-left: 80px;
+}
+
+/*Contact us*/
+.contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+.contactform {
+  margin: auto;
+}
+
+/*Appointments*/
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.form-group
+{
+  padding: 1px;
+}
+#identity
+{
+   padding: 1px;
+}
+.address
+{
+  width: 900px;
+}
+#identity1
+{
+  padding: 20px;
+}
+
+.scroll {
+  
+  overflow-x: hidden;
+  overflow-x: auto;
+}
